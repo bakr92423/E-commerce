@@ -1,38 +1,746 @@
-.App {
+#root{
+    overflow-x: hidden !important;
+}
+body{
+    width: 100% !important;
+    background-color:#eee;
+    overflow-x: hidden !important;
+}
+
+/* nav */
+
+.nave{
+    width: 101% !important;
+   
+}
+.cardIcon{
+    position: relative;
+}
+.cardIcon p{
+  position: absolute;
+    background-color: red;
+    height: 25px !important;
+    width: 25px;
+    border-radius: 50%;
+    top: 45%;
+    font-weight: bold;
+    left: 35%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nave input{
+    width: 50% !important;
+
+}
+.lg-nav{
+    display: none !important;
+}
+
+.nave a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #ffff;
+    cursor: pointer;
+}
+@media (min-width: 300px) and (max-width: 576px) {
+    .sm-nav{
+        display: none !important;
+       
+    }
+    .lg-nav{
+        display: flex !important;
+       
+    }
+    .nave input{
+        width: 75% !important;
+    
+    }
+    .rounded{
+        position: relative;
+        z-index: 99;
+        margin-top: -17px;
+    }
+    .boxUpdateForm select, .boxUpdateForm input {
+    padding: 9px 5px !important;
+}
+    .formAdd, .updateForm {
+    width: 365px !important;
+}
+     .logoNav a{
+        margin-left: 40px !important;
+       
+        padding: 0 30px !important;
+    }
+    .moreInfo{
+        padding: 5px !important;
+    }
+    .sidebar{
+        background-color: #eeeeee !important;
+    }
+    .slider .boxText{
+        font-size: 1.2rem !important ;
+    }
+    .boxDetelse .info div {
+    margin-right: 85px !important ;
+}
+.boxDetelse .info p {
+    width: 38% !important;
+}
+
+
+    }
+
+
+
+/* nav */
+/* footer */
+
+.footer{
+padding-bottom: 12px !important;   
+position: relative; 
+z-index: 888;
+}
+
+
+/* footer */
+/* <HomePage/> */
+
+.home,.detelsPage{
+    width: 100% !important ;
+  
+}
+
+
+/* <HomePage/> */
+/* <slider/> */
+.slider{
+ height: 400px;
+ position: relative;
+}
+.slider img{
+ height: 50% !important;
+ width: 30% !important;
+ position: absolute;
+ right:20%;
+ border-radius: 50%;
+}
+.slider .swiper{
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.slider .swiperSlide{
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00000045;
+
+}
+.slider .boxData{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+   
+}
+.slider .boxText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    flex-direction: column;
+    position: absolute;
+    right: 52%;
+    font-weight: bold;
+    font-size: 1.4rem;
+
+}
+.title{
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+
+/* <slider/> */
+/* <card/> */
+.cart {
+    width: 250px;
+    height: 250px;
+    position: relative;
+}
+.cart .boxImg{
+    height: 90%;
+    border: 1px black solid;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 90%;
+    position: absolute;
+}
+.cart img{
+    width: 100%;
+    height: 100%;
+}
+.cart p{
+    bottom: -50px;
+    position: absolute;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.btn{
+    border: 1px solid black;
+}
+.Btns .info{
+    height: 65px;
+    min-width: fit-content;
+    
+
+}
+.Btns .info p{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+
+}
+
+/* <card/> */
+/* <Productcard/> */
+
+.proCard .card{
+    width: 250px;
+    min-height: 400px;
+    background-color: #00000045;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 1s;
+    box-shadow: 0px 0px 10px 0px black;
+}
+.proCard .card:hover{
+    transform: scale(1.1);
+    
+}
+.card img{
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    top: 0;
+}
+.card .info{
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    
+}
+.card .info .detals {
   text-align: center;
+  font-size: 1.1rem;
+  color:#000000;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;       /* عدد الأسطر التي تريد إظهارها */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4em;          /* ارتفاع السطر */
+  max-height: calc(1.4em * 3); /* 3 أسطر فقط */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card .info .box-price{
+      display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    bottom: -10px;
+    position: absolute;
+    width: 100%;
+    color:#000000
+
+
+}
+.card .info .box-price i{
+    color: yellow;
+}
+.box-cards{
+    flex-wrap: wrap;
+    gap: 30px;
+    
+}
+/* <Productcard/> */
+/* <brandcard/> */
+.brand-card{
+    height: 155px;
+    width: 300px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 1s;
+    box-shadow: 0px 0px 10px 0px black;
+}
+.brand-card img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/* <brandcard/> */
+/* <login/> */
+
+.login{
+    height:76vh;
+}
+.login .form{
+    height: 400px;
+    width: 330px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 1px 3px 5px 3px #000000;
+}
+.login .form input ,select{
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 90%;
+    padding: 10px 0 !important;
+}
+.login .form button{
+ font-weight: bold;
+}
+.login .form p{
+    font-size: .8rem;
+}
+.login .form button:hover{
+ background-color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* <login/> */
+/* <allCategory/> */
+.allCategory,.box-cards{
+    min-height: 50vh;
+    
+}
+/* <allCategory/> */
+/* <pagination/> */
+
+.pagination{
+    height: 200px;
+    margin-top: 80px;
+}
+.page-link {
+    padding: .375rem 1.75rem !important ;
+    font-weight: bold !important;
+ }
+/* <pagination/> */
+/* <brandPage/> */
+.brandPage{
+    min-height: 88vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* <brandPage/> */
+/* <ShopProductsPage/> */
+
+.ShopProductsPage{
+    min-height: 88vh;
+}
+.CategoryHeader {
+    background-color: #fff;
+}
+.boxCategoryHeader {
+    flex-wrap: wrap;
+    
+}
+.boxCategoryHeader p{
+    margin: 0 5px;
+    
 }
 
-.App-link {
-  color: #61dafb;
+.dropdown button{
+    background-color: #fff;
+    color: black;
+}
+/* <ShopProductsPage/> */
+/* <adminPage/> */
+.adminPage{
+    height: 88vh;
+    
+    background-position: center;
+   background-repeat: no-repeat;
+    background-size: cover;
+}
+    .sidebar {
+      height: 88vh;
+      background-color: #f8f9fa;
+      margin-top: -47px;
+     
+      
+    }
+    .sidebar a {
+      padding: 10px 15px;
+      display: block;
+      color: #333;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+     border-right: 5px solid #212529;
+    }
+    .sidebar a:hover {
+      background-color: #cacdcf;
+    }
+    .rounded{
+        position: absolute;
+        height: 95vh;
+    }
+    .mainTitle{
+        font-size: 1.2rem !important;
+         
+    }
+/* <adminPage/> */
+/* <addCategory/> */
+.addCategory,.updateCategoryPage,.AddSubCategory,.UpdateSubCategory,
+.DeleteSubCategory,.AddBrand,.AddProduct,.UpdateProduct {
+    height: 88vh;
+    width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addCategory .sidebar a {
+    padding: 10px 15px !important;
+   
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    }
+    .formAdd,.updateForm{
+        height: 250px;
+    border: 1px solid;
+    width: 500px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 0px 10px 2px black;
+    border: navajowhite;
+    background-color: #fff;
+
+    }
+    ::placeholder{
+        color:black !important ;
+    }
+    .boxForm{
+        position: absolute;
+        width: 100%;
+        gap: 20px;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .boxForm input,.productForm input{
+        padding: 5px 10px;
+        border-radius: 9px;
+        outline: none;
+        border: 1px solid black;
+        margin: 0 5px;
+        font-weight: 600;
+        background-color: #ffffff;
+    }
+    .boxForm button{
+        font-weight: 600;
+        cursor: pointer;
+        
+    }
+    .boxForm button:hover{
+        background-color: #ffff;
+    }
+
+/* <addCategory/> */
+/* <updateCategoryPage/> */
+.updateForm{
+    height:400px;
+    width:500px;
+    position: relative;
 }
+.boForm .form-search{
+    position: absolute;
+}
+.boxUpdateForm{
+    position: absolute;
+    height: 100%;
+    width: 66%;
+    gap: 20px;
+   
+    
+}
+.btnSearch{
+    background-color: #ffffff !important;
+    color: #000000 ;
+}
+.btnSearch:hover{
+    background-color: #ffffff !important;
+    color: #000000;
+}
+.boxUpdateForm select,.boxUpdateForm input{
+    padding: 9px 75px;
+    border: 1px solid black;
+    border-radius: 3px;
+    outline: none;
+    font-weight: bold !important;
+   text-align: center;
+}
+.boxUpdateForm .btn{
+    font-weight: bold !important;
+    
+}
+.boForm{
+ 
+    width: 100%;
+    text-align: center;
+}
+
+/* <updateCategoryPage/> */
+/* <Product/> */
+.productContainer{
+    position: relative;
+}
+.productForm{
+     position: absolute;
+    width: 100%;
+  
+    height:100%;
+}
+
+.rw-1{
+    gap: 15px;
+    flex-wrap: wrap;
+  
+}
+.product-btn{
+    position: absolute;
+    bottom: 65px;
+    right: 45%;
+     padding: 8px 40px;
+     font-weight: bold;
+}
+::placeholder ,select{
+    text-align: center;
+    color: #000000;
+}
+.product-title{
+        right: 45%;
+    top: -60px;
+    position: absolute;
+}
+.input-file{
+    background-color: #ffffff;
+    
+}
+/* <Product/> */
+/* <UpdateProduct/> */
+.box-row{
+    flex-direction: row;
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 85%;
+}
+.box-row h5,h4{
+   height: 1px;
+    position: absolute;
+    top: -65px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.update-Form{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.updateProduct{
+    width: 280px;
+}
+.box-row select,.box-row input,.inputSearch{
+    height: 45px;
+    padding: 5px 10px;
+    border-radius: 9px;
+    outline: none;
+    border: 1px solid black;
+    margin: 0 33px;
+    font-weight: 600;
+    color: #000000;  
+}
+.btnAdd{
+    right: 43%;
+    position: absolute;
+    bottom: 70px;
+    font-weight: 700;
+    padding: 8px 46px;
+}
+/* <UpdateProduct/> */
+/* <reg/> */
+.regForm{
+    width: 600px !important;
+}
+/* <reg/> */
+/* <card/> */
+
+.cartPro{
+    width: 700px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.Btns{
+    width: 800px;
+    min-height: 100px;
+    border-radius: 10px;
+    gap: 5px;
+}
+.BoxBtns{
+    flex-wrap: wrap;
+}
+.xmark i{
+    font-size: 1.5rem !important;
+    
+}
+.cardPage,.SearchPag{
+    min-height: 82vh;
+
+}
+.rounded{
+    box-shadow: 3px 3px 15px 4px #000000de;
+    background-color: #fff;
+    font-weight: 500;
+}
+.rounded img{
+    height: 150px;
+}
+.Btns button {
+    width: 200px;
+    height: 50px;
+    background-color: #ffff;
+    border-radius: 10px;
+    border: 1px solid #17170e;
+}
+.boxCount button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: none;
+    width: 30px;
+    height:30px ;
+
+}
+
+/* <card/> */
+/* <User/> */
+.BoxUser{
+   border-radius: 10px;
+    align-items: center;
+    height: 100px;
+    box-shadow: 0px 0px 5px 0px black;
+    flex-direction: column;
+    background-color: #ffff !important;
+}
+.BoxUser p{
+   font-weight: bolder;
+   height: fit-content; 
+   text-align: center;
+   font-size: 1.1rem;
+   width: 100%;   
+}
+.dataUser p{
+    font-weight:500;
+      font-size: .9rem;
+}
+
+/* <User/> */
+/* <ProductDetelse/> */
+
+.offer {
+    border-radius: 15px;
+    height: fit-content;
+    padding: 14px 0;
+    color: #fff;
+    margin: 10px 0;
+
+}
+
+.detelsPage {
+    align-items: center;
+    flex-direction: column;
+    min-height: 88vh !important ;
+}
+
+.boxDetelse{
+    min-height: 465px;
+    width: 900px;
+    background-color: #ffff;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px 4px #00000052;
+    
+}
+.boxDetelse img{
+    max-height:100%;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+.boxDetelse .info{
+    flex-direction: column;
+    font-weight: bolder;
+}
+.boxDetelse .info p{
+    width: 46%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+}
+.boxDetelse .info i{
+    color: #ff6201;
+   
+}
+.boxDetelse .info div{
+    margin-right: 35px;
+   
+}
+.boxDetelse button{
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+   
+}
+.pro-Card{
+   flex-wrap: wrap;
+   width: 100%;
+   
+}
+
+
+
+
+/* <ProductDetelse/> */
+/* <SearchPage/> */
+.searchPageBtn{
+    font-size: 1rem !important;
+}
+
+
+
+/* <SearchPage/> */
