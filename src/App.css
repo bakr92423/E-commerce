@@ -732,6 +732,11 @@ z-index: 888;
    
 }
 
+.CardItem .rounded{
+    height:26vh !important ;
+    position: relative !important;
+}
+
 
 
 
