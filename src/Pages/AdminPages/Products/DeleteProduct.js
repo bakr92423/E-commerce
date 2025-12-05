@@ -12,7 +12,7 @@ const DeleteProduct = () => {
 
     useEffect(()=>{
      const getDataPro= async()=>{
-        const getData= await axios.get('http://localhost:4000/api/product')
+        const getData= await axios.get('https://e-commerce-node-alpha.vercel.app/api/product')
         const resData=getData.data.data
         setselectCategory(resData)
 
@@ -22,9 +22,9 @@ const DeleteProduct = () => {
 
     const DeleteItem= async(id)=>{
       
-      await axios.delete(`http://localhost:4000/api/product/${id}`)
+      await axios.delete(`https://e-commerce-node-alpha.vercel.app/api/product/${id}`)
       const getDataPro= async()=>{
-        const getData= await axios.get('http://localhost:4000/api/product')
+        const getData= await axios.get('https://e-commerce-node-alpha.vercel.app/api/product')
         const resData=getData.data.data
         setselectCategory(resData)
 

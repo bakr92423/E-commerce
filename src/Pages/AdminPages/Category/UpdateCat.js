@@ -18,7 +18,7 @@ const UpdateCat = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const res = await axios.get('http://localhost:4000/api/category');
+        const res = await axios.get('https://e-commerce-node-alpha.vercel.app/api/category');
         setSelectCategory(res.data.data);
       } catch (error) {
         console.error('فشل تحميل الفئات:', error);
@@ -38,7 +38,7 @@ const UpdateCat = () => {
         const formData = new FormData();
         formData.append('image', image);
 
-        const uploadRes = await axios.post('http://localhost:4000/api/upload', formData, {
+        const uploadRes = await axios.post('https://e-commerce-node-alpha.vercel.app/api/upload', formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
 
@@ -53,7 +53,7 @@ const UpdateCat = () => {
       // تحديث الفئة
       console.log("🔍 البيانات المُرسلة:", { id, name, imageUrl });
 
-      const updateRes = await axios.patch(`http://localhost:4000/api/category/${id}`, {
+      const updateRes = await axios.patch(`https://e-commerce-node-alpha.vercel.app/api/category/${id}`, {
         name:newName,
         img: imageUrl,
       });
@@ -61,7 +61,7 @@ const UpdateCat = () => {
       alert('✅ تم التحديث بنجاح');
       const fetchCategories = async () => {
         try {
-          const res = await axios.get('http://localhost:4000/api/category');
+          const res = await axios.get('https://e-commerce-node-alpha.vercel.app/api/category');
           setSelectCategory(res.data.data);
         } catch (error) {
           console.error('فشل تحميل الفئات:', error);

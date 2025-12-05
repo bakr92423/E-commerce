@@ -14,7 +14,7 @@ const DeleteBrand = () => {
 
  useEffect(()=>{
   const getBrands=async()=>{
-    const brandData= await axios.get(`http://localhost:4000/api/brand`)
+    const brandData= await axios.get(`https://e-commerce-node-alpha.vercel.app/api/brand`)
     const resData= brandData.data.data
     setSelectCategory(resData)
   }

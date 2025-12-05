@@ -27,13 +27,13 @@ const AddBrand = () => {
         const imageFormData= new FormData()
         imageFormData.append('image',image)
 
-        const imageRes= await axios.post('http://localhost:4000/api/upload',imageFormData,{ headers: { "Content-Type": "multipart/form-data" } })
+        const imageRes= await axios.post('https://e-commerce-node-alpha.vercel.app/api/upload',imageFormData,{ headers: { "Content-Type": "multipart/form-data" } })
         const imageUrl=imageRes.data.imageUrl
 
 
         const brandData={name:name,image:imageUrl}
 
-        const brandRes= await axios.post('http://localhost:4000/api/brand',brandData,{headers:{'content-type':'application/json'}})
+        const brandRes= await axios.post('https://e-commerce-node-alpha.vercel.app/api/brand',brandData,{headers:{'content-type':'application/json'}})
         const resData= brandRes.data.data
         console.log(resData);
           alert("🎉 تم إضافة الماركه بنجاح!");

@@ -9,7 +9,7 @@ const CategoryHeader = () => {
     const [cat,setCat]=useState([])
   
     const showCate=async()=>{
-      const getCat= await axios.get(`http://localhost:4000/api/category?page=1&limit=8`)
+      const getCat= await axios.get(`https://e-commerce-node-alpha.vercel.app/api/category?page=1&limit=8`)
       const resDatat=getCat.data.data
       setCat(resDatat)
   

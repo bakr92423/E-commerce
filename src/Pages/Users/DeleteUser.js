@@ -18,7 +18,7 @@ const DeleteUser = () => {
     useEffect(()=>{
          const showCategory=async ()=>{
 
-        const resCategory=await axios.get(`http://localhost:4000/api/user`)
+        const resCategory=await axios.get(`https://e-commerce-node-alpha.vercel.app/api/user`)
         const resData=resCategory.data.data
         setselectCategory(resData)
         console.log(resData[0].firstName);
@@ -33,7 +33,7 @@ const DeleteUser = () => {
   try {
       const token = localStorage.getItem("token"); // جلب التوكن
 
-    await axios.delete(`http://localhost:4000/api/user/${id}`, {
+    await axios.delete(`https://e-commerce-node-alpha.vercel.app/api/user/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`, // إرسال التوكن
       },
@@ -41,7 +41,7 @@ const DeleteUser = () => {
     console.log('✅ تم الحذف');
 
     // بعد الحذف، جلب القائمة المحدثة
-    const resCategory = await axios.get(`http://localhost:4000/api/user`, {
+    const resCategory = await axios.get(`https://e-commerce-node-alpha.vercel.app/api/user`, {
       withCredentials: true, // مهم جدًا أيضًا هنا
     });
 

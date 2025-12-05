@@ -28,22 +28,22 @@ const UpdateProduct = () => {
 
   useEffect(()=>{
     const getDataProduct=async()=>{
-      const dataProduct=await axios.get('http://localhost:4000/api/product')
+      const dataProduct=await axios.get('https://e-commerce-node-alpha.vercel.app/api/product')
       const dataRes=dataProduct.data.data
       setproduct(dataRes)
     }
     const getDataCategory=async()=>{
-      const dataProduct=await axios.get('http://localhost:4000/api/category')
+      const dataProduct=await axios.get('https://e-commerce-node-alpha.vercel.app/api/category')
       const dataRes=dataProduct.data.data
       setselectCategory(dataRes)
     }
     const getDataSubCategory=async()=>{
-      const dataProduct=await axios.get('http://localhost:4000/api/subcategory')
+      const dataProduct=await axios.get('https://e-commerce-node-alpha.vercel.app/api/subcategory')
       const dataRes=dataProduct.data.data
       setselectSubCategory(dataRes)
     }
     const getDataBrand=async()=>{
-      const dataProduct=await axios.get('http://localhost:4000/api/brand')
+      const dataProduct=await axios.get('https://e-commerce-node-alpha.vercel.app/api/brand')
       const dataRes=dataProduct.data.data
       setselectBrand(dataRes)
     }
@@ -64,7 +64,7 @@ const UpdateProduct = () => {
         const formData = new FormData();
         formData.append('image', image);
 
-        const uploadRes = await axios.post('http://localhost:4000/api/upload', formData, {
+        const uploadRes = await axios.post('https://e-commerce-node-alpha.vercel.app/api/upload', formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
 
@@ -76,12 +76,12 @@ const UpdateProduct = () => {
 
 
          
-              const dataProduct=await axios.get(`http://localhost:4000/api/product/${id}`)
+              const dataProduct=await axios.get(`https://e-commerce-node-alpha.vercel.app/api/product/${id}`)
               const dataRes=dataProduct.data.data
               setproductInfo(dataRes)
               console.log(dataRes);
       
-            const updateData=await axios.patch(`http://localhost:4000/api/product/${id}`,{
+            const updateData=await axios.patch(`https://e-commerce-node-alpha.vercel.app/api/product/${id}`,{
               name:newName||dataRes.name,
               price:newPrice||dataRes.price,
               image:newImage||dataRes.image,

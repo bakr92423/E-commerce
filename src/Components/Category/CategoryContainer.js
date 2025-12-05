@@ -11,7 +11,7 @@ const CategoryContainer = () => {
     
       const AllCategory= async()=>{
     
-        const getData=await axios.get('http://localhost:4000/api/category')
+        const getData=await axios.get('https://e-commerce-node-alpha.vercel.app/api/category/api/category')
     
         setCategory(getData.data.data)
         

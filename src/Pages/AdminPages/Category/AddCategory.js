@@ -25,11 +25,11 @@ const AddCategory = () => {
     try {
       const imageFormData= new FormData()
       imageFormData.append("image",image)
-      const imageRes= await axios.post('http://localhost:4000/api/upload',imageFormData,{ headers: { "Content-Type": "multipart/form-data" } })
+      const imageRes= await axios.post('https://e-commerce-node-alpha.vercel.app/api/upload',imageFormData,{ headers: { "Content-Type": "multipart/form-data" } })
       const imageUrl= imageRes.data.imageUrl
       
       const categoryData={name,image: imageUrl}
-      const categoryRes= await axios.post('http://localhost:4000/api/category',categoryData,
+      const categoryRes= await axios.post('https://e-commerce-node-alpha.vercel.app/api/category',categoryData,
         { headers: { "Content-Type": "application/json" } }
         
 

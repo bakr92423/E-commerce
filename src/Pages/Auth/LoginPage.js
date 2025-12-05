@@ -17,7 +17,7 @@ const LoginPage = () => {
   
     try{
       const data={email,password}
-      const sentData= await axios.post('http://localhost:4000/api/login',data,{ headers:{'Content-Type':'application/json'}})
+      const sentData= await axios.post('https://e-commerce-node-alpha.vercel.app/api/login',data,{ headers:{'Content-Type':'application/json'}})
     const {token}=sentData.data
     const role=sentData.data.cheeckUser.role
     console.log(role);

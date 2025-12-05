@@ -19,21 +19,21 @@ const AddProduct = () => {
 
   useEffect(()=>{
     const gateCategoryData=async()=>{
-      const getData= await axios.get(`http://localhost:4000/api/category`)
+      const getData= await axios.get(`https://e-commerce-node-alpha.vercel.app/api/category`)
       const resData=getData.data.data
       console.log(resData);
       
       setCategoryData(resData)
     }
     const gateSubCategoryData=async()=>{
-      const getData= await axios.get(`http://localhost:4000/api/subCategory`)
+      const getData= await axios.get(`https://e-commerce-node-alpha.vercel.app/api/subCategory`)
       const resData=getData.data.data
       console.log(resData);
       
       setSubCategoryData(resData)
     }
     const gateBrandData=async()=>{
-      const getData= await axios.get(`http://localhost:4000/api/brand`)
+      const getData= await axios.get(`https://e-commerce-node-alpha.vercel.app/api/brand`)
       const resData=getData.data.data
    
       
@@ -65,7 +65,7 @@ const AddProduct = () => {
    try{
      const formImage= new FormData()
     formImage.append('image',image)
-    const sendImage= await axios.post('http://localhost:4000/api/upload',formImage,{ headers: { "Content-Type": "multipart/form-data" } })
+    const sendImage= await axios.post('https://e-commerce-node-alpha.vercel.app/api/upload',formImage,{ headers: { "Content-Type": "multipart/form-data" } })
     const imageUrl=sendImage.data.imageUrl
     console.log(imageUrl);
 
@@ -84,7 +84,7 @@ const AddProduct = () => {
 
     const sendData= async()=>{
 
-      const sendDetailsPro= await axios.post('http://localhost:4000/api/product',productData,
+      const sendDetailsPro= await axios.post('https://e-commerce-node-alpha.vercel.app/api/product',productData,
         { headers: { "Content-Type": "application/json" } })
         if(sendDetailsPro.data.errors){
          return( alert(sendDetailsPro.data.errors[0].msg ,"❌"))

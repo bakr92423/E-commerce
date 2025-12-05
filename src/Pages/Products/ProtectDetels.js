@@ -20,12 +20,12 @@ const ProtectDetels = () => {
   useEffect(()=>{
 
      const fetchData= async()=>{
-  const getData= await axios.get(`http://localhost:4000/api/product/${id}`);
+  const getData= await axios.get(`https://e-commerce-node-alpha.vercel.app/api/product/${id}`);
   const resData=getData.data.data
   
   console.log('rerers',resData);
   const categoryId=resData.category
-  const getAtherData= await axios.get(`http://localhost:4000/api/category/${categoryId}/product`);
+  const getAtherData= await axios.get(`https://e-commerce-node-alpha.vercel.app/api/category/${categoryId}/product`);
   setProduct(resData)
   const resAtherData=getAtherData.data.data
   setatherProduct(resAtherData)

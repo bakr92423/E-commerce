@@ -14,7 +14,7 @@ const SearchPage = () => {
       if (!keyword) return;
 
       const res = await axios.get(
-        `http://localhost:4000/api/product?keyWord=${keyword}`
+        `https://e-commerce-node-alpha.vercel.app/api/product?keyWord=${keyword}`
       );
       setProducts(res.data.data);
     };

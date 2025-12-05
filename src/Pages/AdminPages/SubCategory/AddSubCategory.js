@@ -18,7 +18,7 @@ const AddSubCategory = () => {
       }
       
       try{
-        const submitData= await axios.post('http://localhost:4000/api/subCategory',{name},{
+        const submitData= await axios.post('https://e-commerce-node-alpha.vercel.app/api/subCategory',{name},{
           headers:{'Content-Type':'application/json'}
         }
         

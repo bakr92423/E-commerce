@@ -14,7 +14,7 @@ const HomeCategory = () => {
     
         const AllCategory= async()=>{
     
-        const getData=await axios.get('http://localhost:4000/api/category?limit=5&page=1')
+        const getData=await axios.get('https://e-commerce-node-alpha.vercel.app/api/category?limit=5&page=1')
         const resData=getData.data.data
         setCategory(resData)
         console.log(resData);

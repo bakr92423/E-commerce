@@ -9,7 +9,7 @@ const SearchCountResult = () => {
     
       const allPro= async()=>{
     
-        const getProduct= await axios.get("http://localhost:4000/api/product?page=1&limit=20")
+        const getProduct= await axios.get("https://e-commerce-node-alpha.vercel.app/api/product?page=1&limit=20")
         const resData=getProduct.data.data
     
         setPro(resData)

@@ -16,7 +16,7 @@ const UpdateSubCategory = () => {
     useEffect(()=>{
       const getData= async()=>{
 
-        const resData= await axios.get('http://localhost:4000/api/subCategory')
+        const resData= await axios.get('https://e-commerce-node-alpha.vercel.app/api/subCategory')
 
         const fetchData=resData.data.data
         setsubCategory(fetchData)
@@ -46,9 +46,9 @@ const UpdateSubCategory = () => {
     const handleSubmit= async({id,name})=>{
       
       try{
-        const updateData= await axios.patch(`http://localhost:4000/api/subCategory/${id}`,{name:newName})
+        const updateData= await axios.patch(`https://e-commerce-node-alpha.vercel.app/api/subCategory/${id}`,{name:newName})
         alert('تم تعديل الفئة الفرعية بنجاح')
-        const resData= await axios.get('http://localhost:4000/api/subCategory')
+        const resData= await axios.get('https://e-commerce-node-alpha.vercel.app/api/subCategory')
 
         const fetchData=resData.data.data
         setsubCategory(fetchData)

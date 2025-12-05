@@ -14,7 +14,7 @@ const DeleteSubCategory = () => {
     useEffect(()=>{
         const getData= async()=>{
 
-   const fetchData= await axios.get('http://localhost:4000/api/subCategory')
+   const fetchData= await axios.get('https://e-commerce-node-alpha.vercel.app/api/subCategory')
    const resData= fetchData.data.data
  
    setselectCategory(resData)
@@ -30,10 +30,10 @@ const DeleteSubCategory = () => {
     },[])
 
     const DeleteItem= async(id)=>{
-       await axios.delete(`http://localhost:4000/api/subCategory/${id}`)
+       await axios.delete(`https://e-commerce-node-alpha.vercel.app/api/subCategory/${id}`)
               const getData= async()=>{
 
-   const fetchData= await axios.get('http://localhost:4000/api/subCategory')
+   const fetchData= await axios.get('https://e-commerce-node-alpha.vercel.app/api/subCategory')
    const resData= fetchData.data.data
  
    setselectCategory(resData)

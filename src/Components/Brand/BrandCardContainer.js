@@ -11,7 +11,7 @@ const BrandCardContainer = () => {
 
   const getBrands=async()=>{
 
-    const getData=await axios.get('http://localhost:4000/api/brand?limit=8&page=1')
+    const getData=await axios.get('https://e-commerce-node-alpha.vercel.app/api/brand?limit=8&page=1')
     const resData=getData.data.data
     setBrand(resData)
 

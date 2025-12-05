@@ -9,7 +9,7 @@ const[brand,setBrand]=useState([])
 
     const allBrands= async()=>{
 
-      const getBrands= await axios.get('http://localhost:4000/api/brand')
+      const getBrands= await axios.get('https://e-commerce-node-alpha.vercel.app/api/brand')
      const  resData=getBrands.data.data
       setBrand(resData)
       

@@ -7,7 +7,7 @@ const AllUser = () => {
   const [user,setUser]=useState([])
 
   const getUsers=async()=>{
-    const data= await axios.get(`http://localhost:4000/api/user`)
+    const data= await axios.get(`https://e-commerce-node-alpha.vercel.app/api/user`)
     const resData=data.data.data
     setUser(resData)
   }

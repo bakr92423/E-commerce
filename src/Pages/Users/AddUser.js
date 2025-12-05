@@ -22,7 +22,7 @@ const createUser = async () => {
     };
 
     const sendData = await axios.post(
-      'http://localhost:4000/api/user',
+      'https://e-commerce-node-alpha.vercel.app/api/user',
       data,
       {
         headers: { 'Content-Type': 'application/json' }

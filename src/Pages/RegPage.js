@@ -13,7 +13,7 @@ const RegPage = () => {
   const handileSubmit=async()=>{
     try{
       const data = { firstName, lastName, email, password }
-    const sendData=  await axios.post('http://localhost:4000/api/user',data,{
+    const sendData=  await axios.post('https://e-commerce-node-alpha.vercel.app/api/user',data,{
       headers:{'Content-Type':'application/json'}
     })
     if(sendData.data.errors){

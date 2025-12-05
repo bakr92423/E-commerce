@@ -10,7 +10,7 @@ const CardProductContainer = ({title,btnTitle ,path}) => {
   
     const mostSell= async()=>{
   
-      const getProduct= await axios.get("http://localhost:4000/api/product?page=1&limit=8")
+      const getProduct= await axios.get("https://e-commerce-node-alpha.vercel.app/api/product?page=1&limit=8")
       const resData=getProduct.data.data
   
       setPro(resData)

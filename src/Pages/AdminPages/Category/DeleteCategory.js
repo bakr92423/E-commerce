@@ -15,7 +15,7 @@ const DeleteCategory = () => {
 
       const showCategory=async ()=>{
 
-        const resCategory=await axios.get(`http://localhost:4000/api/category`)
+        const resCategory=await axios.get(`https://e-commerce-node-alpha.vercel.app/api/category`)
         const resData=resCategory.data.data
         setSelectCategory(resData)
         console.log(resData);
@@ -30,10 +30,10 @@ const DeleteCategory = () => {
     const DeleteItem= async(id)=>{
 
       
-         await axios.delete(`http://localhost:4000/api/category/${id}`)
+         await axios.delete(`https://e-commerce-node-alpha.vercel.app/api/category/${id}`)
          const showCategory=async ()=>{
 
-          const resCategory=await axios.get(`http://localhost:4000/api/category`)
+          const resCategory=await axios.get(`https://e-commerce-node-alpha.vercel.app/api/category`)
           const resData=resCategory.data.data
           setSelectCategory(resData)
           console.log(resData);

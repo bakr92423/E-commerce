@@ -17,7 +17,7 @@ const UpdateBrand = () => {
 
      useEffect(()=>{
       const getBrands= async()=>{
-        const getData= await axios.get('http://localhost:4000/api/brand')
+        const getData= await axios.get('https://e-commerce-node-alpha.vercel.app/api/brand')
         const resData=getData.data.data
         setSelectCategory(resData)
       }
@@ -35,7 +35,7 @@ const UpdateBrand = () => {
              const formData = new FormData();
              formData.append('image', image);
      
-             const uploadRes = await axios.post('http://localhost:4000/api/upload', formData, {
+             const uploadRes = await axios.post('https://e-commerce-node-alpha.vercel.app/api/upload', formData, {
                headers: { 'Content-Type': 'multipart/form-data' },
              });
      
@@ -49,7 +49,7 @@ const UpdateBrand = () => {
            // تحديث الفئة
            console.log("🔍 البيانات المُرسلة:", { id, name, imageUrl });
      
-           const updateRes = await axios.patch(`http://localhost:4000/api/brand/${id}`, {
+           const updateRes = await axios.patch(`https://e-commerce-node-alpha.vercel.app/api/brand/${id}`, {
              name:newName,
              img: imageUrl,
            });
@@ -57,7 +57,7 @@ const UpdateBrand = () => {
            alert('✅ تم التحديث بنجاح');
            console.log(updateRes.data);
                 const getBrands= async()=>{
-        const getData= await axios.get('http://localhost:4000/api/brand')
+        const getData= await axios.get('https://e-commerce-node-alpha.vercel.app/api/brand')
         const resData=getData.data.data
         setSelectCategory(resData)
       }
